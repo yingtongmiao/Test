@@ -10,12 +10,12 @@ class TestAtomicwriting(unittest.TestCase):
 
     def test_writing_1(self):
         content = "Yingtong Miao\nTammy"
-        res = atomicwriting(r"C:\Users\Lenovo\Desktop\test.txt", "Yingtong Miao\nTammy")
+        res = atomicwriting(r"C:\Users\Lenovo\Desktop\test.txt", content)
         self.assertEqual(res, content)
 
     def test_writing_2(self):
         content = "Yingtong Miao\nTammy"
-        res = atomicwriting("C:\\Users\\Lenovo\\Desktop\\test.txt", "Yingtong Miao\nTammy")
+        res = atomicwriting("C:\\Users\\Lenovo\\Desktop\\test.txt", content)
         self.assertEqual(res, content)
         
     def test_notstring_0(self):
