@@ -1,12 +1,18 @@
-language: node_js
-node_js:
-  - "10"
+language: python
+python:
+  - "3.7"
+  - "3.8"
+  - "3.9"
 
-cache:
-  yarn: true
-
-install:
-  - yarn install
-
+# command to install dependencies
+#install:
+#  - pip install tox
+# command to run tests
 script:
-  - npm run build
+  - python writingparquetfile.py
+notifications:
+  email:
+    recipients:
+      - yingtongm@163.com
+    on_success: change
+    on_failure: always
