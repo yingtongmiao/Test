@@ -20,3 +20,11 @@ def atomicwriting(filename, content):
             return content
     except:
         return "File name or file path error"
+
+
+
+def main():
+    print(atomicwriting("writingfile.txt", "Yingtong Miao\nTammy"))
+ 
+if __name__ == '__main__':
+    main()
