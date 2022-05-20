@@ -9,7 +9,7 @@ install:
 # command to run tests
 script:
   - python atomicwriting.py
-  - pytest --cov=atomicwriting --cov-report=term-missing --cov-branch
+  - pytest test_atomicwriting.py
   - python writingparquetfile.py
 notifications:
   email:
