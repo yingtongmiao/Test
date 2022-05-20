@@ -10,6 +10,8 @@ def checker(func):
             return "File name is empty."
         if not b:
             return "Writing contents are empty."
+        if not a.endswith(".parquet"):
+            return "File name is not parquet file."
         return func(a, b)
     return new_func
 
@@ -26,3 +28,8 @@ def writingparquetfile(filename,content):
     except:
         return "DataFrame constructor not properly called!"
     
+def main():
+    print(writingparquetfile("writingfile.txt", [1,2,3,4]))
+ 
+if __name__ == '__main__':
+    main()
